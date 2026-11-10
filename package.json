@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve --open",
-    "build2": "babel src -d controller --watch"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Diego",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "babel-loader": "^10.1.1",
+    "gh-pages": "^6.3.0",
     "webpack": "^5.110.2",
     "webpack-cli": "^7.2.3",
     "webpack-dev-server": "^6.0.0"
