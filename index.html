@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./public/img/favico.png" type="image/x-icon">
+    <title>Examen Unidad 3</title>
+</head>
+<body>
+
+    <div class="container py-5">
+        <div class="row justify-content-center mb-4">
+            <div class="col text-center">
+                <h1 class="text-primary fw-bold">Evaluador de Expresiones Regulares</h1>
+                <p class="text-muted">Examen Unidad 3</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta del formulario -->
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                    <form id="regexForm" novalidate>
+                        
+                        <!-- Input Expresión Regular -->
+                        <div class="mb-3">
+                            <label for="regexInput" class="form-label fw-semibold">Expresión Regular (ER):</label>
+                            <div class="input-group">
+                                <span class="input-group-text">/</span>
+                                <input 
+                                    type="text" 
+                                    id="regexInput" 
+                                    class="form-control" 
+                                    placeholder="Ej. ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                    autocomplete="off"
+                                >
+                                <span class="input-group-text">/</span>
+                            </div>
+                            <div class="form-text">Ingresa el patrón de la expresión regular.</div>
+                        </div>
+
+                        <!-- Input Texto a evaluar -->
+                        <div class="mb-4">
+                            <label for="textInput" class="form-label fw-semibold">Texto:</label>
+                            <textarea 
+                                id="textInput" 
+                                class="form-control" 
+                                rows="3" 
+                                placeholder="Ingresa el texto que deseas comparar..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Botones de Acción -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" id="btnClear" class="btn btn-outline-secondary px-4">
+                                Limpiar
+                            </button>
+                            <button type="submit" id="btnCompare" class="btn btn-primary px-4">
+                                Comparar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <script src="./bundle.js"></script>
+</body>
+</html>
